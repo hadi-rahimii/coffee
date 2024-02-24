@@ -12,7 +12,7 @@ function Card({ title, desc, price, img }) {
         <p class="m-0">{desc}</p>
       </div>
     </div>
-  );
+  )
 }
 
 export default Card;

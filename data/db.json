@@ -6,6 +6,7 @@
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "price": 8,
       "img": "/images/menu-1.jpg",
+       "type": "cold",
       "off": 0
     },
     {
@@ -13,6 +14,7 @@
       "title": "Chocolete Coffee",
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "price": 7,
+      "type" : "hot",
       "img": "/images/menu-2.jpg",
       "off": 0
     }
@@ -51,30 +53,50 @@
       "email": "hadii@gmail.com"
     }
   ],
-  "comment": [
+  "comments": [
     {
-      "id": "1",
+      "id": 1,
       "username": "Q_Yolme",
-      "body": "Perfect Coffee :))",
       "productID": 1,
-      "score": 5
+      "body": "Wonderful coffee ❤️",
+      "profile": "/images/testimonial-1.jpg"
     },
     {
-      "id": "2",
-      "username": "Amin_Saeedi",
-      "body": "Perfect Coffee :))",
+      "id": 2,
+      "username": "Amin Saeedi",
       "productID": 2,
-      "score": 4.5
+      "body": "Perfect coffee 🙋‍♂️❤️",
+      "profile": "/images/testimonial-2.jpg"
+    },
+    {
+      "id": 3,
+      "username": "Sasan Moqaddas",
+      "productID": 1,
+      "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
+      "profile": "/images/testimonial-3.jpg"
+    },
+    {
+      "id": 4,
+      "username": "Alireza Rezaei",
+      "productID": 2,
+      "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
+      "profile": "/images/testimonial-4.jpg"
+    },
+    {
+      "id": 5,
+      "username": "Mmd Mohammadi",
+      "productID": 1,
+      "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
+      "profile": "/images/testimonial-4.jpg"
     }
   ],
-  "reserves": [
+  "messages": [
     {
-      "id": "cb85",
-      "name": "hadi",
-      "email": "rahimi",
-      "date": "2024/12/8",
-      "time": "15:20",
-      "person": "2"
+      "id": 1,
+      "username": "amin",
+      "email": "amin@gmail.com",
+      "subject": "React Native Course",
+      "body": "Please teach react native course"
     }
   ]
 }
