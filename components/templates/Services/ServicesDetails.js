@@ -1,6 +1,6 @@
 import React from "react";
 
-function ServiceItem({ title, desc, img, icon }) {
+function ServiceItem() {
   return (
     <div> efw</div>
   );
