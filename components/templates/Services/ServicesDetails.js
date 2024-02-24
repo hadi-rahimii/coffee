@@ -1,7 +1,9 @@
 import React from "react";
 
-function ServicesDetails() {
-  return <div>ServicesDetails</div>;
+function ServiceItem({ title, desc, img, icon }) {
+  return (
+    <div> efw</div>
+  );
 }
 
-export default ServicesDetails;
+export default ServiceItem;
