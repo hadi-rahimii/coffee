@@ -2,12 +2,14 @@ import React from 'react'
 import Slider from '@/components/templates/Index/Slider'
 import Services from '@/components/templates/Index/Services'
 import About from '@/components/templates/Index/About'
+import Offer from '@/components/templates/Index/Offer'
 export default function Index({data}) {
   return (
     <>
     <Slider />
     <About />
     <Services services={data.services} />
+    <Offer />
   </>
   )
 
