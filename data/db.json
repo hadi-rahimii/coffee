@@ -66,5 +66,15 @@
       "productID": 2,
       "score": 4.5
     }
+  ],
+  "reserves": [
+    {
+      "id": "cb85",
+      "name": "hadi",
+      "email": "rahimi",
+      "date": "2024/12/8",
+      "time": "15:20",
+      "person": "2"
+    }
   ]
 }
