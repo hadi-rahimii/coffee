@@ -1,7 +1,7 @@
 import ServiceItem from "@/components/modules/ServiceItem/ServiceItem";
 import React from "react";
 
-function Services({services}) {
+function Services({ services }) {
   return (
     <div class="container-fluid pt-5">
       <div class="container">

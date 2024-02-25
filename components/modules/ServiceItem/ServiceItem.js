@@ -1,9 +1,11 @@
 import React from "react";
-import * as Icons from "@fortawesome/free-solid-svg-icons";
+
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faTruck, faTable } from "@fortawesome/free-solid-svg-icons";
+import * as Icons from "@fortawesome/free-solid-svg-icons";
 
 function ServiceItem({ title, desc, img, icon }) {
   return (
@@ -13,10 +15,14 @@ function ServiceItem({ title, desc, img, icon }) {
           <img class="img-fluid mb-3 mb-sm-0" src={img} alt="" />
         </div>
         <div class="col-sm-7">
-          <h4  style={{
+          <h4
+            style={{
               display: "flex",
               alignItems: "baseline",
-            }}>
+            }}
+          >
+            {/* <i class="fa fa-truck service-icon"></i> */}
+
             <div
               style={{
                 background: "#da9f5b",
@@ -32,6 +38,7 @@ function ServiceItem({ title, desc, img, icon }) {
                 style={{ fontSize: "1rem", margin: "0,auto" }}
               />
             </div>
+
             <p className="ml-3">{title}</p>
           </h4>
           <p class="m-0">{desc}</p>

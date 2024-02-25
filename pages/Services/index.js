@@ -1,56 +1,25 @@
-import ServiceItem from "@/components/modules/ServiceItem/ServiceItem";
+import PageHeader from "@/components/modules/PageHeader/PageHeader";
+import ServicesDetails from "@/components/templates/Services/ServicesDetails";
 import React from "react";
 
-function Services() {
+function Services({ services }) {
   return (
-    <div class="container-fluid pt-5">
-      <div class="container">
-        <div class="section-title">
-          <h4
-            class="text-primary text-uppercase"
-            style={{ letterSpacing: "5px" }}
-          >
-            Our Services
-          </h4>
-          <h1 class="display-4">Fresh &amp; Organic Beans</h1>
-        </div>
-        <div class="row">
-          <ServiceItem
-            title="Fastest Door Delivery"
-            desc="Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et
-            et lorem dolor sed est sit invidunt, dolore tempor diam ipsum
-            takima erat tempor"
-            img="/images/service-1.jpg"
-            icon=""
-          />
-          <ServiceItem
-            title="Fresh Coffee Beans"
-            desc="Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et
-            et lorem dolor sed est sit invidunt, dolore tempor diam ipsum
-            takima erat tempor"
-            img="/images/service-2.jpg"
-            icon=""
-          />
-          <ServiceItem
-            title="Online Table Booking"
-            desc="Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et
-            et lorem dolor sed est sit invidunt, dolore tempor diam ipsum
-            takima erat tempor"
-            img="/images/service-3.jpg"
-            icon=""
-          />
-          <ServiceItem
-            title="Best Quality Coffee"
-            desc="Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et
-            et lorem dolor sed est sit invidunt, dolore tempor diam ipsum
-            takima erat tempor"
-            img="/images/service-4.jpg"
-            icon=""
-          />
-        </div>
-      </div>
-    </div>
+    <>
+      <PageHeader route="Services" />
+      <ServicesDetails data={services} />
+    </>
   );
+}
+
+export async function getStaticProps(context) {
+  const res = await fetch("http://localhost:4000/services");
+  const data = await res.json();
+
+  return {
+    props: {
+      services: data,
+    },
+  };
 }
 
 export default Services;
