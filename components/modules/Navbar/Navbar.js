@@ -1,30 +1,77 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "@/styles/Navbar.module.css";
 import Link from "next/link";
 
+// Fontawesome
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { useRouter } from "next/router";
+
 function Navbar() {
+  const route = useRouter();
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    setSearch(route.query.q);
+  }, []);
+
+  const searchHandlerWithEnter = (event) => {
+    if (event.keyCode === 13) {
+      if (search.trim()) {
+        route.push(`/search?q=${search}`);
+      }
+    }
+  };
+
+  const searchHandler = () => {
+    if (search.trim()) {
+      route.push(`/search?q=${search}`);
+    }
+  };
+
   return (
-    <div class={`container-fluid p-0 ${styles.nav_bar}`}>
+    <div className={`container-fluid p-0 ${styles.nav_bar}`}>
       <nav
-        class={`${styles.navbar} ${styles.navbar_expand_lg} bg-none navbar-dark py-3`}
+        className={`${styles.navbar} ${styles.navbar_expand_lg} bg-none navbar-dark py-3`}
       >
-        <a href="index.html" class={`${styles.navbar_brand} px-lg-4 m-0`}>
-          <h1 class="m-0 display-4 text-uppercase text-white">Next-Coffee</h1>
-        </a>
+        <div className="d-flex align-items-center position-relative">
+          <Link href="/" className={`${styles.navbar_brand} px-lg-4 m-0`}>
+            <h1 className="m-0 display-4 text-uppercase text-white">
+              Next-Coffee
+            </h1>
+          </Link>
+
+          <input
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
+            onKeyDown={searchHandlerWithEnter}
+            type="text"
+            className={styles.search_input}
+            placeholder="Search..."
+          />
+          <FontAwesomeIcon
+            onClick={searchHandler}
+            className={styles.search_icon}
+            icon={faSearch}
+          />
+        </div>
         <button
           type="button"
-          class={`${styles.navbar_toggler}`}
+          className={`${styles.navbar_toggler}`}
           data-toggle="collapse"
           data-target="#navbarCollapse"
         >
-          <span class={`${styles.navbar_toggler_icon}`}></span>
+          <span className={`${styles.navbar_toggler_icon}`}></span>
         </button>
         <div
-          class={`collapse ${styles.navbar_collapse} justify-content-between`}
+          className={`collapse ${styles.navbar_collapse} justify-content-between`}
           id="navbarCollapse"
         >
-          <div class={`${styles.navbar_nav} ml-auto p-4`}>
-          <Link
+          <div className={`${styles.navbar_nav} ml-auto p-4`}>
+            <Link
               href="/"
               className={`${styles.nav_link} ${styles.active_nav_link}`}
             >
@@ -41,17 +88,19 @@ function Navbar() {
               Menu
             </Link>
 
-           
-            <div class={`${styles.dropdown}`}>
+            <div className={`${styles.dropdown}`}>
               <a
                 href="#"
-                class={`${styles.nav_link} ${styles.dropdown_toggle}`}
+                className={`${styles.nav_link} ${styles.dropdown_toggle}`}
                 data-toggle="dropdown"
               >
                 Pages
               </a>
-              <div class={`${styles.dropdown_menu} ${styles.text_capitalize}`}>
-              <Link href="/reservation" className={`${styles.dropdown_item}`}>
+
+              <div
+                className={`${styles.dropdown_menu} ${styles.text_capitalize}`}
+              >
+                <Link href="/reservation" className={`${styles.dropdown_item}`}>
                   Reservation
                 </Link>
                 <Link href="/testimonial" className={`${styles.dropdown_item}`}>
@@ -59,7 +108,8 @@ function Navbar() {
                 </Link>
               </div>
             </div>
-            <Link href="/contact" class={`${styles.nav_link}`}>
+
+            <Link href="/contact" className={`${styles.nav_link}`}>
               Contact
             </Link>
           </div>
