@@ -51,12 +51,12 @@ function Navbar() {
                 Pages
               </a>
               <div class={`${styles.dropdown_menu} ${styles.text_capitalize}`}>
-                <a href="reservation.html" class={`${styles.dropdown_item}`}>
+              <Link href="/reservation" className={`${styles.dropdown_item}`}>
                   Reservation
-                </a>
-                <a href="testimonial.html" class={`${styles.dropdown_item}`}>
+                </Link>
+                <Link href="/testimonial" className={`${styles.dropdown_item}`}>
                   Testimonial
-                </a>
+                </Link>
               </div>
             </div>
             <a href="contact.html" class={`${styles.nav_link}`}>
