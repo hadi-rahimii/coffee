@@ -1,6 +1,6 @@
 import React from "react";
-
-function Card({ title, desc, price, img }) {
+import Link from "next/link";
+function Card({ title, desc, price, img,id }) {
   return (
     <div class="row align-items-center mb-5">
       <div class="col-4 col-sm-3">
@@ -8,7 +8,9 @@ function Card({ title, desc, price, img }) {
         <h5 class="menu-price">${price}</h5>
       </div>
       <div class="col-8 col-sm-9">
-        <h4>{title}</h4>
+      <Link href={`/products/${id}`}>
+          <h4>{title}</h4>
+        </Link>
         <p class="m-0">{desc}</p>
       </div>
     </div>

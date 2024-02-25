@@ -1,22 +1,64 @@
 {
   "menu": [
     {
-      "id": "1",
+      "id": 1,
       "title": "Black Coffee",
+      "price": 5,
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "price": 8,
-      "img": "/images/menu-1.jpg",
+      "score": 5,
+      "off": 0,
       "type": "cold",
-      "off": 0
+      "img": "/images/menu-1.jpg"
     },
     {
-      "id": "2",
-      "title": "Chocolete Coffee",
+      "id": 2,
+      "title": "Hot Chocolete",
+      "price": 4,
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "price": 7,
+      "score": 4.4,
+      "off": 0,
       "type": "hot",
-      "img": "/images/menu-2.jpg",
-      "off": 0
+      "img": "/images/menu-2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Ice Cream",
+      "price": 6,
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 4.9,
+      "off": 0,
+      "type": "cold",
+      "img": "/images/menu-3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Tea",
+      "price": 3,
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 5,
+      "off": 0,
+      "type": "hot",
+      "img": "/images/menu-4.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Chocolate Milk",
+      "price": 4,
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 4.8,
+      "off": 50,
+      "type": "hot",
+      "img": "/images/menu-5.jpeg"
+    },
+    {
+      "id": 6,
+      "title": "Banana Milk",
+      "price": 12,
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 4.9,
+      "off": 0,
+      "type": "cold",
+      "img": "/images/menu-6.jpeg"
     }
   ],
   "services": [
