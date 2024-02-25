@@ -37,10 +37,11 @@ function Navbar() {
             <Link href="/services" className={`${styles.nav_link}`}>
               Services
             </Link>
-
-            <a href="menu.html" class={`${styles.nav_link}`}>
+            <Link href="/menu" className={`${styles.nav_link}`}>
               Menu
-            </a>
+            </Link>
+
+           
             <div class={`${styles.dropdown}`}>
               <a
                 href="#"
