@@ -1,4 +1,9 @@
 import React from "react";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faMapMarkedAlt, faPhoneAlt, faEnvelope, faTwitter} from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
   return (
@@ -12,13 +17,15 @@ function Footer() {
             Get In Touch
           </h4>
           <p>
-            <i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA
+          <FontAwesomeIcon icon={faMapMarkedAlt} className="mr-2" />
+            123 Street, New York, USA
           </p>
           <p>
-            <i class="fa fa-phone-alt mr-2"></i>+012 345 67890
+          <FontAwesomeIcon icon={faPhoneAlt} className="mr-2" />+012 345 67890
           </p>
           <p class="m-0">
-            <i class="fa fa-envelope mr-2"></i>info@example.com
+          <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                  info@example.com
           </p>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
@@ -31,6 +38,7 @@ function Footer() {
           <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
           <div class="d-flex justify-content-start">
             <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#">
+            {/* <FontAwesomeIcon   /> */}
               <i class="fab fa-twitter"></i>
             </a>
             <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#">

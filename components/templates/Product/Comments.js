@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
-const Comments = ({data}) => {
+const Comments = ({ data }) => {
   return (
     <div className="container-fluid pt-5">
       <div className="container">
@@ -39,25 +39,31 @@ const Comments = ({data}) => {
             modules={[Pagination]}
             className={styles.swiper}
           >
-            {data.slice(0, 6).map((comment) => (
-              <SwiperSlide className={styles.swiper_slide} key={comment.id}>
-                <div className="testimonial-item">
-                  <div className="d-flex align-items-center mb-3">
-                    <img
-                      className="img-fluid"
-                      width={100}
-                      src={comment.profile}
-                      alt=""
-                    />
-                    <div className="ml-3">
-                      <h4>{comment.username}</h4>
-                      <p className="text-left mb-0">User</p>
+            {data.length ? (
+              <>
+                {data.slice(0, 6).map((comment) => (
+                  <SwiperSlide className={styles.swiper_slide} key={comment.id}>
+                    <div className="testimonial-item">
+                      <div className="d-flex align-items-center mb-3">
+                        <img
+                          className="img-fluid"
+                          width={100}
+                          src={comment.profile}
+                          alt=""
+                        />
+                        <div className="ml-3">
+                          <h4>{comment.username}</h4>
+                          <p className="text-left mb-0">User</p>
+                        </div>
+                      </div>
+                      <p className="m-0 mb-4">{comment.body}</p>
                     </div>
-                  </div>
-                  <p className="m-0 mb-4">{comment.body}</p>
-                </div>
-              </SwiperSlide>
-            ))}
+                  </SwiperSlide>
+                ))}
+              </>
+            ) : (
+              <h1 className=" text-center text-danger">No Comment </h1>
+            )}
           </Swiper>
         </div>
       </div>
